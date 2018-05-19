@@ -3,9 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>test</title>
-
+    <title>Angular Ivy change detection methods in action</title>
+    <script src="path.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/2.7.2/typescript.min.js"></script>
+<link href="main.css" rel="stylesheet"></head>
 <body>
-  test
-</body>
+    <div class="container">
+        <div class="w-50">
+            <div class="scheme">
+                <div class="cd-triggers">
+                    <div class="cd-triggers__chain">
+                        <a href="https://github.com/angular/angular/blob/7e9649bdf1483885d61142172be3f709cde051e8/packages/core/src/render3/instructions.ts#L2066"
+                           target="_blank" title="Go to definition" class="step" data-step="markDirty">
+                            markDirty
+                        </a>
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L1934"
+                           target="_blank" title="Go to definition" class="step" data-step="markViewDirty">
+                            markViewDirty
+                        </a>
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L1959"
+                           target="_blank" title="Go to definition" class="step" data-step="scheduleTick">
+                            scheduleTick
+                        </a>
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L1983"
+                           target="_blank" title="Go to definition" class="step" data-step="tick">
+                            tick
+                        </a>
+                    </div>
+                    <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L2022"
+                       target="_blank" title="Go to definition" class="cd-triggers__manual step">
+                        detectChanges
+                    </a>
+                </div>
+                <div class="process">
+                    <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L524"
+                       target="_blank" title="Go to definition" data-step="renderComponentOrTemplate" class="step step_render_component_or_template">
+                        renderComponentOrTemplate
+                    </a>
+                    <div class="group align-start">
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L296"
+                           target="_blank" title="Go to definition" class="step step__execute-init-and-content-hooks" data-step="executeInitAndContentHooks">
+                            executeInitAndContentHooks
+                        </a>
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L539"
+                           target="_blank" title="Go to definition" class="step" data-step="setHostBindings(0, 0)">
+                            setHostBindings(0, 0)
+                        </a>
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L1701"
+                           target="_blank" title="Go to definition" class="step step__component-refresh" data-step="componentRefresh">
+                            componentRefresh
+                        </a>
+                    </div>
+                    <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L2047"
+                       target="_blank" title="Go to definition" class="step step__detect-changes" data-step="detectChangesInternal">
+                        detectChangesInternal
+                    </a>
+
+                    <div class="group group__detect-changes">
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L2053"
+                           target="_blank" title="Go to definition" class="step step__template" data-step="template">
+                            <i></i>
+                            template(rFlags, context)
+                        </a>
+                        <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L258"
+                           target="_blank" title="Go to definition" class="step step__refresh_view" data-step="refreshView">
+                            refreshView
+                        </a>
+                    </div>
+
+                    <div class="refresh-view-implementation">
+                        <div class="group__refresh-view">
+                            <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/hooks.ts#L99"
+                               target="_blank" title="Go to definition" class="step step__execute-init-hooks" data-step="executeInitHooks">
+                                executeInitHooks
+                            </a>
+                            <a href="https://github.com/angular/angular/blob/master/packages/core/src/render3/instructions.ts#L1541"
+                               target="_blank" title="Go to definition" class="step step__refresh-dynamic-children" data-step="refreshDynamicChildren">
+                                refreshDynamicChildren
+                            </a>
+                            <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L265"
+                               target="_blank" title="Go to definition" class="step" data-step="executeContentHooks">
+                                executeContentHooks
+                            </a>
+                            <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L271"
+                               target="_blank" title="Go to definition" class="step" data-step="setHostBindings">
+                                setHostBindings
+                            </a>
+                            <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L288"
+                               target="_blank" title="Go to definition" class="step step__refresh-child-components" data-step="refreshChildComponents">
+                                refreshChildComponents
+                            </a>
+                        </div>
+                        <div class="dynamic">
+                            <a href="https://github.com/angular/angular/blob/88ab1d0e553238f45e16fabd208134f836564a63/packages/core/src/render3/instructions.ts#L487"
+                               target="_blank" title="Go to definition" class="step step__render-embedded-template" data-step="renderEmbeddedTemplate">
+                                renderEmbeddedTemplate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-50">
+            <my-app></my-app>
+            <div class="info">
+                <div class="range-container">
+                    <input type="range" id="range" min="0" step="1" value="0">
+                    <div id="range-value"></div> <span id="info"></span>
+                </div>
+                <div class="actions">
+                    <button id="prevBtn">Prev</button>
+                    <button id="nextBtn">Next</button>
+                </div>
+
+                <div class="info__action">
+
+                </div>
+                <div class="label">Views</div>
+                <div class="info__view"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="box-label">Input</div>
+            <textarea id="input" cols="100" rows="40" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        </div>
+
+        <button id="btnRun">Run <br>AOT compiler</button>
+        <div class="box">
+            <div class="box-label">Output</div>
+            <div class="output">
+                <textarea disabled id="output" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="main.7f768177e4b58af385e3.js"></script></body>
 </html>
